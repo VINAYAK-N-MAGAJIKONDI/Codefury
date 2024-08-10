@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1070829614731",
+    "firebase_url": "https://voyage-cab-booking-default-rtdb.firebaseio.com",
+    "project_id": "voyage-cab-booking",
+    "storage_bucket": "voyage-cab-booking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070829614731:android:56cb49fa53caf0617ac68e",
+        "android_client_info": {
+          "package_name": "com.begining.app.begining"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSQThMVjjBFZfH6KExilsDSF1oUcuFQsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070829614731:android:6d394cc43507a33c7ac68e",
+        "android_client_info": {
+          "package_name": "com.example.phone_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSQThMVjjBFZfH6KExilsDSF1oUcuFQsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
