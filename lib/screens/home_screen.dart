@@ -1,7 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:phone_auth/screens/login_screen.dart'; // Import your login screen
-
+import 'weather_card.dart';
+import 'news_carasoul.dart';
+import 'disaster_guides_screen.dart';
+import 'earthquake_alert_screen.dart';
+import 'custom_appbar.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -11,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  int _selectedIndex = 0;
 
   Future<void> _signOut() async {
     try {
@@ -22,69 +26,83 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+
+
+  final PageController _pageController = PageController();
+
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      _pageController.jumpToPage(index);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue.shade100,
-      appBar: AppBar(
-        backgroundColor: Colors.blue.shade900,
-        title: const Text(
-          'Shield',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight), // Set the preferred size
+        child: const CustomAppBar(), // Wrap CustomAppBar with PreferredSize
+      ), // Use your CustomAppBar widget
+      body: PageView(
+        controller: _pageController,
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        children: [
+          // Home Page
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Welcome Buddy!",
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue.shade900,
+                  ),
+                ),
+                WeatherCard(),
+                SizedBox(height: 20),
+                NewsCarousel(),
+
+              ],
+            ),
           ),
-        ),
-        automaticallyImplyLeading: false, // Remove the back button
-        actions: [
-          IconButton(
-            onPressed: _signOut,
-            icon: Icon(Icons.logout),
-            color: Colors.white, // Set icon color for better visibility
-          ),
+
+          // Search Page
+          // (You will need to create a SearchPage widget or reuse an existing one)
+             DisasterManagementApp(),
+
+          // Disaster Guides Page
+          const DisasterGuidesScreen(), // Assuming EarthquakeAlertScreen displays your disaster guides
         ],
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Welcome Buddy!",
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue.shade900,
-              ),
-            ),
-            SizedBox(height: 20),
-            Icon(
-              Icons.shield,
-              size: 80,
-              color: Colors.blue.shade900,
-            ),
-          ],
-        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.backup_table_rounded),
+            label: 'Feed',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.book), // Changed the icon
+            label: 'Guides', // Changed the label
           ),
         ],
-        currentIndex: 0,
+        currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue.shade900,
         unselectedItemColor: Colors.grey.shade500,
+        onTap: _onItemTapped, // Call _onItemTapped when an item is tapped
       ),
     );
   }

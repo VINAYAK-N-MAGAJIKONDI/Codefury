@@ -1,7 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:phone_auth/screens/login_screen.dart'; // Import your screens
+import 'package:phone_auth/screens/login_screen.dart';
 import 'package:phone_auth/screens/home_screen.dart';
+import 'package:phone_auth/screens/earthquake_alert_screen.dart'; // Import new screen
+import 'package:phone_auth/screens/disaster_guides_screen.dart'; // Import new screen
+// Import new screen
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,10 +21,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/login', // Set the initial route to the login screen
+      initialRoute: '/login',
       routes: {
         '/login': (context) => const LoginScreen(),
-        '/home': (context) => const HomeScreen(), // Define the route for HomeScreen
+        '/home': (context) => const HomeScreen(),
+        //'/earthquakeAlerts': (context) => const EarthquakeAlertScreen(), // Add route
+        '/disasterGuides': (context) => const DisasterGuidesScreen(), // Add route
+ // Add route
       },
     );
   }

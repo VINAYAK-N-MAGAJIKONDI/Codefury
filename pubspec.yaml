@@ -37,7 +37,15 @@ dependencies:
   cupertino_icons: ^1.0.6
   firebase_core: ^2.28.0
   firebase_auth: ^4.19.0
+  youtube_player_flutter: ^8.0.0  # For embedding YouTube videos
+  url_launcher: ^6.1.7  # For launching URLs
 
+  carousel_slider: ^5.0.0 # Use the latest version
+
+  geolocator: ^7.3.1  # Location services (for earthquake alerts)
+  http: ^0.13.4 # HTTP requests (for earthquake alerts)
+  sqflite: ^2.1.0 # Local database (for disaster guides and contacts)
+  path: ^1.8.2 # Path handling for databases
 dev_dependencies:
   flutter_test:
     sdk: flutter
