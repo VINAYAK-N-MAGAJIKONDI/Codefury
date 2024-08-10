@@ -94,12 +94,7 @@ class _OTPScreenState extends State<OTPScreen> {
 
                     await FirebaseAuth.instance.signInWithCredential(cred);
 
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
-                      ),
-                    );
+                    Navigator.pushReplacementNamed(context, '/home');
                   } catch (e) {
                     log(e.toString());
                   }

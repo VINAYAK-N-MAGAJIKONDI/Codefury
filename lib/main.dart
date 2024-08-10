@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:phone_auth/screens/login_screen.dart';
+import 'package:phone_auth/screens/login_screen.dart'; // Import your screens
+import 'package:phone_auth/screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +16,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: LoginScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/login', // Set the initial route to the login screen
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/home': (context) => const HomeScreen(), // Define the route for HomeScreen
+      },
+    );
   }
 }
