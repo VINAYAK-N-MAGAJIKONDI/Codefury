@@ -41,7 +41,8 @@ dependencies:
   url_launcher: ^6.1.7  # For launching URLs
 
   carousel_slider: ^5.0.0 # Use the latest version
-
+  firebase_messaging:
+  cloud_firestore:
   geolocator: ^7.3.1  # Location services (for earthquake alerts)
   http: ^0.13.4 # HTTP requests (for earthquake alerts)
   sqflite: ^2.1.0 # Local database (for disaster guides and contacts)
