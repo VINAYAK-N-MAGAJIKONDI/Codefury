@@ -18,6 +18,14 @@
 5. **Contact during Emergency:** Whenever there is a need of help from government and Disaster Management Bodies, have a call with them in no time. All the contact numbers of such bodies are provided.
 
 6. **Get Alerts:** The app will provide push notifications and alerts whenever there is a disaster to be occurred in the place we stay. With help of this, we can be prepared and evacuate the area before we are in danger!
+
+## Special Prompts:
+
+1. **Use of Phone Authentication** 
+2. **Use of Geolocation API**
+3. **Use of Push Notifications**
+
+   
 ## Screenshots
 
 # App Screenshots
@@ -25,6 +33,7 @@
     <img src="https://github.com/user-attachments/assets/0745bc03-7f96-4a22-ab72-cccc99380d69" alt="Image 1" style="width: 200px; margin-right: 10px;">
     <img src="https://github.com/user-attachments/assets/12581c5a-cfb1-4967-a0b3-441b182eeff9" alt="Image 2" style="width: 200px; margin-right: 10px;">
     <img src="https://github.com/user-attachments/assets/c7ba9a96-a03b-447c-8b22-7196cbfe893c" alt="Image 3" style="width: 200px; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/b1e9f908-74fe-432b-8ee5-c1c09f96897b" alt="Image 3" style="width: 200px; margin-right: 10px;">
 </div>
 
 <div style="display: flex; flex-wrap: wrap;">
@@ -55,9 +64,6 @@ Cloud Storage
 6. **Push Notification:** This feature was enabled to give alerts to users based on their location and climate.
 
 
-## Demo
-
-Insert gif or link to demo
 
 
 
@@ -134,7 +140,11 @@ flutter run
 3. *Upload to App Store:*
    - Use Xcode or Application Loader to upload your app to the App Store.
 
-
+## Acknowledgement
+We thank IEEE UVCE for giving us this oppurtunity to develop this application useful for all common people.
+This is open to everyone who would like to contribute more.
+Hope you liked our project.
+Thank you!
 
 
 
