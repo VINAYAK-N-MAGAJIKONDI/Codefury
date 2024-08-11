@@ -20,7 +20,21 @@
 6. **Get Alerts:** The app will provide push notifications and alerts whenever there is a disaster to be occurred in the place we stay. With help of this, we can be prepared and evacuate the area before we are in danger!
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+# App Screenshots
+<div style="display: flex; flex-wrap: wrap;">
+    <img src="https://github.com/user-attachments/assets/0745bc03-7f96-4a22-ab72-cccc99380d69" alt="Image 1" style="width: 200px; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/12581c5a-cfb1-4967-a0b3-441b182eeff9" alt="Image 2" style="width: 200px; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/c7ba9a96-a03b-447c-8b22-7196cbfe893c" alt="Image 3" style="width: 200px; margin-right: 10px;">
+</div>
+
+<div style="display: flex; flex-wrap: wrap;">
+    <img src="https://github.com/user-attachments/assets/b3b96d08-53af-4b99-8cd5-1f69074e272c" alt="Image 4" style="width: 200px; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/85555a3b-1033-4cb0-8521-9df05fdbbc10" alt="Image 5" style="width: 200px; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/c06c2c76-b6ef-40dd-8d6b-df602e68c0a5" alt="Image 6" style="width: 200px; margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/25e7dca2-9a3d-4329-91df-74b111a87fac" alt="Image 7" style="width: 200px; margin-right: 10px;">
+</div>
+
+
 
 
 ## Tech Stack
